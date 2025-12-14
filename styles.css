@@ -1,0 +1,71 @@
+body { 
+    background-color: #050505; 
+    color: white; 
+    overflow-x: hidden; 
+}
+
+::-webkit-scrollbar { 
+    width: 8px; 
+}
+
+::-webkit-scrollbar-track { 
+    background: #050505; 
+}
+
+::-webkit-scrollbar-thumb { 
+    background: #333; 
+    border-radius: 4px; 
+}
+
+::-webkit-scrollbar-thumb:hover { 
+    background: #B4F73D; 
+}
+
+.glass-nav {
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+    color: transparent;
+}
+
+.interactive-box {
+    background-color: #0f0f0f;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.interactive-box::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(180, 247, 61, 0.1) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.interactive-box:hover {
+    border-color: #B4F73D;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(180, 247, 61, 0.15);
+}
+
+.interactive-box:hover::before {
+    opacity: 1;
+}
+
+.interactive-box:hover .icon-scale {
+    transform: scale(1.2) rotate(-10deg);
+    color: #B4F73D;
+}
