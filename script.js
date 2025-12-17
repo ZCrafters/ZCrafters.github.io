@@ -55,3 +55,23 @@ window.addEventListener('scroll', () => {
         navbar.classList.remove('py-3');
     }
 });
+
+// Mobile Menu Logic
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenuCloseBtn = document.getElementById('mobile-menu-close-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+function toggleMenu() {
+    const isHidden = mobileMenu.classList.toggle('hidden');
+    mobileMenuBtn.setAttribute('aria-expanded', !isHidden);
+}
+
+function closeMenu() {
+    mobileMenu.classList.add('hidden');
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+}
+
+if (mobileMenuBtn && mobileMenu && mobileMenuCloseBtn) {
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+    mobileMenuCloseBtn.addEventListener('click', closeMenu);
+}
