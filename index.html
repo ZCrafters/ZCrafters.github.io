@@ -41,12 +41,12 @@
                 <a href="#work" class="hover:text-white transition-colors hover:underline decoration-brand-green underline-offset-8">Selected Work</a>
             </div>
 
-            <a href="https://wa.me/6285880574423" target="_blank" class="hidden md:flex items-center gap-2 border border-white/20 px-6 py-2 rounded-full font-bold text-xs hover:bg-brand-green hover:text-black hover:border-brand-green transition-all group font-display tracking-wide">
+            <a href="https://wa.me/6285880574423" target="_blank" rel="noopener noreferrer" class="hidden md:flex items-center gap-2 border border-white/20 px-6 py-2 rounded-full font-bold text-xs hover:bg-brand-green hover:text-black hover:border-brand-green transition-all group font-display tracking-wide">
                 LET'S TALK
                 <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:rotate-45 transition-transform"></i>
             </a>
 
-            <button class="md:hidden text-white p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+            <button class="md:hidden text-white p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Toggle mobile menu">
                 <i data-lucide="menu"></i>
             </button>
         </div>
@@ -54,7 +54,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-brand-black border-b border-white/10 p-6 flex flex-col gap-6 md:hidden shadow-2xl h-screen z-50">
             <div class="flex justify-end">
-                <button onclick="document.getElementById('mobile-menu').classList.add('hidden')"><i data-lucide="x"></i></button>
+                <button onclick="document.getElementById('mobile-menu').classList.add('hidden')" aria-label="Close mobile menu"><i data-lucide="x"></i></button>
             </div>
             <a href="#about" class="text-3xl font-display font-bold hover:text-brand-green">STUDIO</a>
             <a href="#services" class="text-3xl font-display font-bold hover:text-brand-green">SERVICES</a>
@@ -322,7 +322,7 @@
                 Jangan biarkan ide cemerlang Anda mengendap. Diskusikan kebutuhan dokumentasi atau branding Anda bersama tim CakraLabs.
             </p>
             
-            <a href="https://wa.me/6285880574423" target="_blank" class="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-black transition-all duration-300 bg-brand-green rounded-full focus:outline-none hover:bg-white hover:scale-105 font-display text-lg">
+            <a href="https://wa.me/6285880574423" target="_blank" rel="noopener noreferrer" class="group relative inline-flex items-center justify-center px-10 py-5 font-bold text-black transition-all duration-300 bg-brand-green rounded-full focus:outline-none hover:bg-white hover:scale-105 font-display text-lg">
                 <span class="mr-3">Ayo Diskusi dengan Kami</span>
                 <i data-lucide="message-circle" class="w-6 h-6 group-hover:rotate-12 transition-transform"></i>
             </a>
